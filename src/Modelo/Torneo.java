@@ -36,5 +36,7 @@ public class Torneo implements Serializable{
         this.puntuacion = puntuacion;
     }
     
-    
+    public Torneo() {
+        
+    }
 }
