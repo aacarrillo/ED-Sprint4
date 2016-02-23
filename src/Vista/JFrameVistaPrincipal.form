@@ -18,6 +18,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cargar Tenistas"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemCargarTenistaActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemGuardarTenista">
               <Properties>
@@ -172,10 +175,8 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Component id="jLabel4Palmares" max="32767" attributes="0"/>
-                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLabelNombre" max="32767" attributes="0"/>
-                          <Component id="jLabelEdad" max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="jLabelNombre" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jLabelEdad" alignment="0" max="32767" attributes="0"/>
                       <Component id="jLabelPuntuacion" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>

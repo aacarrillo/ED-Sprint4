@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import javax.swing.JFileChooser;
+
 /**
  *
  * @author Alejandroo
@@ -109,9 +111,8 @@ public class JFrameVistaPrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanelDatosTenistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jLabel4Palmares, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelDatosTenistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabelNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabelEdad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabelNombre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelEdad, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabelPuntuacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanelDatosTenistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -193,6 +194,11 @@ public class JFrameVistaPrincipal extends javax.swing.JFrame {
         jMenuArchivo.add(jMenuItemInicializar);
 
         jMenuItemCargarTenista.setText("Cargar Tenistas");
+        jMenuItemCargarTenista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCargarTenistaActionPerformed(evt);
+            }
+        });
         jMenuArchivo.add(jMenuItemCargarTenista);
 
         jMenuItemGuardarTenista.setText("Guardar Tenistas");
@@ -287,6 +293,11 @@ public class JFrameVistaPrincipal extends javax.swing.JFrame {
         vista.setVisible(true);
         
     }//GEN-LAST:event_jMenuItemAnadirTorneoActionPerformed
+
+    private void jMenuItemCargarTenistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCargarTenistaActionPerformed
+        CargarTenistas ct = new CargarTenistas(this, true);
+        ct.setVisible(true);
+    }//GEN-LAST:event_jMenuItemCargarTenistaActionPerformed
 
     /**
      * @param args the command line arguments
